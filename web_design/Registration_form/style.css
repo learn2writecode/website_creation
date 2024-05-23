@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Popinns", Georgia;
+}
+:root {
+  --primary-color: rgb(22, 112, 209);
+  --white-color: #fff;
+  --grey: rgb(98, 94, 94);
+  --black-color: #0a365f;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 50px 25px 0px;
+  max-width: 100%;
+  width: 700px;
+  margin: auto;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("images/background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  z-index: -1;
+}
+.container .headline {
+  text-align: center;
+  padding-bottom: 48px;
+}
+.container .headline h1 {
+  font: size 45px;
+  font-weight: 600;
+  font-family: Georgia;
+}
+
+.container .from-group {
+  margin-bottom: 10px;
+}
+
+.container .from-group input {
+  display: block;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+  padding: 11px 15px;
+  height: 45px;
+  color: rgb(14, 14, 14);
+  border-radius: 1fr;
+  box-shadow: rgb(77, 26, 196);
+  width: 60%;
+}
+
+.container .from-group input::placeholder {
+  color: var(--black-color);
+  font-weight: 600;
+  font-size: 13px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.container .btn /*for button*/ {
+  width: 60%;
+  margin: 15px 0 30px;
+  font-family: 13px;
+  line-height: 22px;
+  font-weight: 700px;
+  padding: 12px 29px;
+  height: 45px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.container .form {
+  margin-left: 160px;
+  margin-top: 22px;
+}
+
+.SignUp.inActive {
+  display: none;
+}
+
+.SignIn {
+  display: none;
+}
+
+.SignIn.active {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .SignIn,
+  .SignUp {
+    align-items: center;
+    margin-left: -40%;
+    margin-right: 50%;
+  }
+
+  .container .from-group input {
+    width: 100%;
+  }
+  .container .btn {
+    width: 100%;
+  }
+}
